@@ -1,1 +1,132 @@
-Hello, world!
+<html>
+	<head>
+		<title>ItsHuel workspace</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap');
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'Montserrat', sans-serif;
+			}
+			.screen {
+				width: 100%;
+				height: 100%;
+			}
+			.main-screen {
+				background-color: #222222;
+				box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+			}
+			.light {
+				position: absolute;
+				width: 800px;
+				height: 800px;
+				top: calc(50% - 400px);
+				left: calc(50% - 400px);
+				background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+			}
+			.navbar {
+				width: 100%;
+				height: 50px;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			.logo {
+				float: left;
+				margin-left: 50px;
+			}
+			.menu {
+				margin-left: calc(100% - 110px);
+				padding-top: 5px;
+			}
+			.menu-stick {
+				display: block;
+				width: 60px;
+				height: 6px;
+				background-color: #ffffff;
+				margin-bottom: 10px;
+			}
+			.main-text {
+				height: 336px;
+				text-align: center;
+				width: 800px;
+				margin-top: calc(50vh - 325px);
+				margin-left: auto;
+				margin-right: auto;
+				color: #ffffff;
+			}
+			.border {
+				position: absolute;
+			}
+			.border-left {
+				transform: translate(-400px, -80px);
+			}
+			.border-right {
+				transform: translate(200px, 0);
+			}
+			.welcome {
+				font-size: 48px;
+				padding-top: 80px;
+			}
+			.welcome-title {
+				font-size: 64px;
+			}
+			.coloured-text {
+				font-weight: 900;
+				color: #FF2B2B;
+			}
+			.main-footer {
+				text-align: center;
+				margin-top: calc(100vh - 825px);
+			}
+			.main-footer-text {
+				color: #ffffff;
+				font-size: 32px;
+				font-weight: 100;
+				margin-bottom: 50px;
+			}
+			.second-screen {
+				height: calc(100vh - 80px);
+			}
+			.soon {
+				text-align: center;
+				padding-top: calc(50vh - 80px);
+				font-size: 48px;
+			}
+			.footer {
+				width: 100%;
+				height: 80px;
+				background-color: #222222;
+				box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="screen main-screen">
+			<div class="light"></div>
+			<div class="navbar">
+				<img class="logo" src="imgs/logo.png">
+				<div class="menu">
+					<span class="menu-stick"></span>
+					<span class="menu-stick"></span>
+					<span class="menu-stick"></span>
+				</div>
+			</div>
+			<div class="main-text">
+				<img class="border border-right" src="imgs/border-right.png">
+				<p class="welcome">Welcome to</p>
+				<p class="welcome-title"><span class="coloured-text">ITSHUEL</span> workspace!</p>
+				<img class="border border-left" src="imgs/border-left.png">
+			</div>
+			<div class="main-footer">
+				<p class="main-footer-text">it's so minimalistic...</p>
+				<img src="imgs/arrow.png">
+			</div>
+		</div>
+		<div class="screen second-screen">
+			<p class="soon">Coming soon...</p>
+		</div>
+		<div class="footer">
+			<p>Made by <span class="bold-text">@itshuel</span></p>
+		</div>
+	</body>
+</html>
