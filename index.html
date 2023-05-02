@@ -1,133 +1,109 @@
 <html>
 	<head>
-		<title>ItsHuel workspace</title>
+		<title>Birthday party!</title>
 		<link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+			/* 
+			font-family: 'Monoton', cursive;
+			*/
 			* {
 				margin: 0;
 				padding: 0;
 				font-family: 'Montserrat', sans-serif;
+				color: #ffffff;
 			}
-			.screen {
-				width: 100%;
-				height: 100%;
+			a {
+				text-decoration: none;
 			}
-			.main-screen {
+			body {
 				background-color: #222222;
-				box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+				background-image: url("imgs/bgbg.png");
+				width: 100vw;
+				height: 100vh;
 			}
-			.light {
-				position: absolute;
-				width: 800px;
-				height: 800px;
-				top: calc(50% - 400px);
-				left: calc(50% - 400px);
-				background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
-			}
-			.navbar {
-				width: 100%;
-				height: 50px;
-				padding-top: 50px;
-				padding-bottom: 50px;
-			}
-			.logo {
-				float: left;
-				margin-left: 50px;
-			}
-			.menu {
-				margin-left: calc(100% - 110px);
-				padding-top: 5px;
-			}
-			.menu-stick {
-				display: block;
-				width: 60px;
-				height: 6px;
-				background-color: #ffffff;
-				margin-bottom: 10px;
-			}
-			.main-text {
-				height: 336px;
-				text-align: center;
-				width: 800px;
-				margin-top: calc(50vh - 325px);
+			.container {
+				width: 1200px;
 				margin-left: auto;
 				margin-right: auto;
-				color: #ffffff;
-			}
-			.border {
 				position: absolute;
+				top: 50vh;
+				left: 50vw;
+				transform: translate(-50%, -50%);
 			}
-			.border-left {
-				transform: translate(-400px, -80px);
+			.line {
+				margin-top: 50px;
 			}
-			.border-right {
-				transform: translate(200px, 0);
+			.info {
+				margin-top: 50px;
+				display: grid;
+				grid-template-columns: auto auto auto 1fr 200px;
+				grid-template-areas: "t t t _ b";
+				grid-gap: 50px;
 			}
-			.welcome {
-				font-size: 48px;
-				padding-top: 80px;
+			.info-text {
+				background-color: #222222;
+				padding: 30px;
+				box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.5);
 			}
-			.welcome-title {
-				font-size: 64px;
+			.info-text > p {
+				font-size: 16px;
 			}
-			.coloured-text {
-				font-weight: 900;
-				color: #FF2B2B;
+			.info-text > h1 {
+				font-size: 20px;
 			}
-			.main-footer {
-				text-align: center;
-				margin-top: calc(100vh - 825px);
+			.info-button {
+				grid-area: b;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 200px;
+  				height: 94px;
+				font-weight: 800;
+				background-color: #222222;
+				border-image: linear-gradient(45deg, #FFA69F, #FE7EFD, #9CA1FE) 30;
+				border-width: 2px;
+				border-style: solid;
+				box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.5);
 			}
-			.main-footer-text {
-				color: #ffffff;
-				font-size: 32px;
-				font-weight: 100;
-				margin-bottom: 50px;
-			}
-			.second-screen {
-				height: calc(100vh - 80px);
-			}
-			.soon {
-				text-align: center;
-				padding-top: calc(50vh - 80px);
-				font-size: 48px;
+			.info-button:hover {
+				background: linear-gradient(45deg, #FFA69F, #FE7EFD, #9CA1FE);
 			}
 			.footer {
-				width: 100%;
-				height: 80px;
-				background-color: #222222;
-				box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+				width: 200px;
+				position: absolute;
+				bottom: 50px;
+				left: calc(50vw - 100px);
+				text-align: center;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="screen main-screen">
-			<div class="light"></div>
-			<div class="navbar">
-				<img class="logo" src="imgs/logo.png">
-				<div class="menu">
-					<span class="menu-stick"></span>
-					<span class="menu-stick"></span>
-					<span class="menu-stick"></span>
+		<div class="container">
+			<div class="header">
+				<img src="imgs/header.png" class="header-image">
+			</div>
+			<img src="imgs/line.png" alt="" class="line">
+			<div class="info">
+				<div class="info-text">
+					<p>место:</p>
+					<h1>Кореновская 2к3</h1>
 				</div>
+				<div class="info-text">
+					<p>время:</p>
+					<h1>18:00</h1>
+				</div>
+				<div class="info-text">
+					<p>стиль:</p>
+					<h1>удобный</h1>
+				</div>
+				<a href="" class="info-button">Подробнее</a>
 			</div>
-			<div class="main-text">
-				<img class="border border-right" src="imgs/border-right.png">
-				<p class="welcome">Welcome to</p>
-				<p class="welcome-title"><span class="coloured-text">ITSHUEL</span> workspace!</p>
-				<img class="border border-left" src="imgs/border-left.png">
-			</div>
-			<div class="main-footer">
-				<p class="main-footer-text">it's so minimalistic...</p>
-				<img src="imgs/arrow.png">
-			</div>
-		</div>
-		<div class="screen second-screen">
-			<p class="soon">Coming soon...</p>
 		</div>
 		<div class="footer">
-			<p>Made by <span class="bold-text">@itshuel</span></p>
+			<img src="imgs/itshuel.png" class="itshuel">
+			</div>
 		</div>
 	</body>
 </html>
