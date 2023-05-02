@@ -5,9 +5,6 @@
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-			/* 
-			font-family: 'Monoton', cursive;
-			*/
 			* {
 				margin: 0;
 				padding: 0;
@@ -32,14 +29,23 @@
 				left: 50vw;
 				transform: translate(-50%, -50%);
 			}
+			.header-image {
+				width: 800px;
+			}
 			.line {
 				margin-top: 50px;
+				width: 1200px;
 			}
 			.info {
 				margin-top: 50px;
 				display: grid;
-				grid-template-columns: auto auto auto 1fr 200px;
-				grid-template-areas: "t t t _ b";
+				grid-template-columns: auto 1fr 200px;
+				grid-template-areas: "t _ b";
+				grid-gap: 50px;
+			}
+			.info-items {
+				display: grid;
+				grid-template-columns: auto auto auto;
 				grid-gap: 50px;
 			}
 			.info-text {
@@ -79,6 +85,49 @@
 				left: calc(50vw - 100px);
 				text-align: center;
 			}
+			@media screen and (max-width: 1300px) {
+				.container {
+					width: 900px;
+				}
+				.header-image {
+					width: 600px;
+				}
+				.line {
+					width: 900px;
+				}
+				.info-text {
+					padding: 20px;
+				}
+			}
+			@media screen and (max-width: 1000px) {
+				.container {
+					width: 600px;
+				}
+				.header-image {
+					width: 500px;
+				}
+				.line {
+					width: 600px;
+				}
+				.info {
+					display: block;
+				}
+				.info-items {
+					display: grid;
+					grid-template-columns: auto auto auto;
+					grid-gap: 30px;
+				}
+				.info-text > p {
+				font-size: 14px;
+				}
+				.info-text > h1 {
+					font-size: 16px;
+				}
+				.info-button {
+					margin-left: auto;
+					margin-top: 50px;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -88,17 +137,19 @@
 			</div>
 			<img src="imgs/line.png" alt="" class="line">
 			<div class="info">
-				<div class="info-text">
-					<p>место:</p>
-					<h1>Кореновская 2к3</h1>
-				</div>
-				<div class="info-text">
-					<p>время:</p>
-					<h1>18:00</h1>
-				</div>
-				<div class="info-text">
-					<p>стиль:</p>
-					<h1>удобный</h1>
+				<div class="info-items">
+					<div class="info-text">
+						<p>место:</p>
+						<h1>Кореновская 2к3</h1>
+					</div>
+					<div class="info-text">
+						<p>время:</p>
+						<h1>18:00</h1>
+					</div>
+					<div class="info-text">
+						<p>стиль:</p>
+						<h1>удобный</h1>
+					</div>
 				</div>
 				<a href="" class="info-button">Подробнее</a>
 			</div>
