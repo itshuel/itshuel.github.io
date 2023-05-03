@@ -2,6 +2,7 @@
 	<head>
 		<title>Birthday party!</title>
 		<link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+		<meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -10,6 +11,7 @@
 				padding: 0;
 				font-family: 'Montserrat', sans-serif;
 				color: #ffffff;
+				transition: all 0.2s ease;
 			}
 			a {
 				text-decoration: none;
@@ -17,7 +19,7 @@
 			body {
 				background-color: #222222;
 				background-image: url("imgs/bgbg.png");
-				width: 100vw;
+				width: 100%;
 				height: 100vh;
 			}
 			.container {
@@ -72,7 +74,6 @@
 				border-width: 2px;
 				border-style: solid;
 				box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.5);
-				transition: all 0.3s ease;
 			}
 			.info-button:hover {
 				background: linear-gradient(45deg, #FFA69F, #FE7EFD, #9CA1FE);
@@ -94,6 +95,7 @@
 				}
 				.line {
 					width: 900px;
+					height: 6px;
 				}
 				.info-text {
 					padding: 20px;
@@ -126,7 +128,89 @@
 				.info-button {
 					margin-left: auto;
 					margin-top: 50px;
+					height: 77px;
 				}
+			}
+			@media screen and (max-width: 700px) {
+				.container {
+					width: 500px;
+				}
+				.header {
+					width: 400px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.header-image {
+					width: 400px;
+				}
+				.line {
+					width: 500px;
+				}
+				.info-text > p {
+				font-size: 12px;
+				}
+				.info-text > h1 {
+					font-size: 14px;
+				}
+				.info-button {
+					margin-left: auto;
+					margin-top: 50px;
+					height: 73px;
+					font-size: 14px;
+				}
+				.footer > .itshuel {
+					height: 14px;
+				}
+			}
+			@media screen and (max-width: 580px) {
+				.container {
+					width: calc(100vw - 40px);
+				}
+				.header {
+					width: calc(100vw - 100px);
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.header-image {
+					width: calc(100vw - 100px);
+				}
+				.line {
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					margin-top: 30px;
+					width: calc(100vw - 40px);
+				}
+				.info {
+					margin-top: 30px;
+				}
+				.info-items {
+					width: calc(100vw - 100px);
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.info-text {
+					display: block;
+					margin-bottom: 30px;
+				}
+				.info-button {
+					margin-right: 30px;
+					margin-top: 30px;
+				}
+				.footer {
+					bottom: 30px;
+				}
+			}
+			@media screen and (max-width: 450px) {
+				* {
+					text-align: center;
+				}
+				.info-button {
+					margin-left: auto;
+					margin-right: auto;
+				}
+				
 			}
 		</style>
 	</head>
