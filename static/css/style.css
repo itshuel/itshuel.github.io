@@ -5,6 +5,7 @@
     padding: 0;
     text-decoration: none;
     font-family: "Montserrat Alternates", sans-serif;
+    transition: all 0.3s ease;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
     justify-content: center;
 }
 .main > .main-text {
+    text-align: center;
     font-size: 60px;
     color: rgba(255,255,255,1);
 }
@@ -58,13 +60,28 @@ body {
     line-height: 80px;
     color: rgba(255,255,255,1);
 }
+.main > .button:hover::after {
+    width: 280px;
+    height: 80px;
+    content: "";
+    position: absolute;
+    margin-top: calc(50vh + 45px);
+    margin-left: 50vw;
+    transform: translate(-50%, -50%);
+    inset: 0px;
+    background: linear-gradient(to bottom right, rgba(69,76,241,1), rgba(229,34,187,1));
+    filter: blur(40px);
+    z-index: -1;
+}
 .main > .top-left {
     position: absolute;
     transform: translate(calc(-50vw + 180px), calc(-50vh + 275px));
+    z-index: -1;
 }
 .main > .bottom-right {
     position: absolute;
     transform: translate(calc(50vw - 180px), calc(50vh - 275px));
+    z-index: -1;
 }
 
 .footer {
@@ -79,7 +96,7 @@ body {
     margin-right: auto;
     border: 2px solid rgba(255,255,255,0.1);
     border-radius: 20px;
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,0.25);
     font-size: 20px;
     display: flex;
     align-items: center;
